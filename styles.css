@@ -1,0 +1,234 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 40px; /* Adjust based on your design */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for hover effect */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #000;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+/* Navigation Links Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scale */
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: #ff6b6b; /* Changes color on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* On Click (Active) Effect */
+.nav-links a:active {
+    color: #e63946; /* Darker shade when clicked */
+    transform: scale(0.95); /* Slightly shrinks on click */
+}
+
+/* Focus Effect (for keyboard users) */
+.nav-links a:focus {
+    outline: none;
+    color: #ff6b6b;
+    border-bottom: 2px solid #ff6b6b; /* Underline effect for accessibility */
+}
+
+
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+/* Existing Explore Button Styling */
+.cta-button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition added for smooth hover effect */
+}
+
+/* Hover Effect for the Explore Button */
+.cta-button:hover {
+    background-color: #ff4d4d; /* Same color change as the nav links */
+    transform: scale(1.05); /* Slight enlargement effect on hover */
+}
+
+/* Active (Click) Effect for Explore Button */
+.cta-button:active {
+    background-color: #e63946; /* Darker color when clicked */
+    transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.about, .courses, .contact {
+    padding: 50px;
+    background-color: #fff;
+    margin: 10px 50px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.course-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-10px); /* Lift up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Contact Form */
+form {
+    display: auto;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px 10px;
+    margin: 10px 250px;
+    width: 60%;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:hover, form textarea:hover {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+form button {
+    background-color: #ff6b6b;
+    width: 60%;
+    color: white;
+    padding: 10px;
+    margin: 10px 250px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-5px); /* Button lift effect */
+}
+/* Map Container */
+.map-container {
+    margin-top: 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+/* Contact Section Styling */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 0.5px; /* Adds space between form and map */
+    justify-content: space-between; /* Space out the form and map evenly */
+}
+
+form {
+    flex: 1; /* Form takes up available space */
+    min-width: 300px; /* Minimum size for the form */
+}
+
+.map-container {
+    flex: 1; /* Map takes up available space */
+    min-width: 300px; /* Minimum size for the map */
+}
+
+.map-container iframe {
+    width: 500px; /* Make the map responsive */
+    height: 300px; /* Adjust the height to fill the container */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack form and map vertically on small screens */
+    }
+
+    .map-container iframe {
+        height: 300px; /* Adjust the map height for smaller screens */
+    }
+}
+
